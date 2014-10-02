@@ -1,0 +1,28 @@
+<style>
+    input, textarea {
+        margin-top:20px;
+        display:block;
+        width:100%;
+        font-size:2em;
+    }
+</style>
+
+<input type=text id=secret-agent-man>
+<textarea id=cordova-device-plugin-data></textarea>
+
+<script src=cordova.js></script>
+<script>
+    document.addEventListener('deviceready', function() {
+        
+        var d = ""
+        d += 'Name: '    + device.name     + "\n"
+        d += 'Cordova: ' + device.cordova  + "\n"        
+        d += 'Platform: '+ device.platform + "\n"
+        d += 'UUID: '    + device.uuid     + "\n"
+        d += 'Model: '   + device.model    + "\n"
+        d += 'Version: ' + device.version  + "\n"
+
+        window['cordova-device-plugin-data'].value = d
+        window['secret-agent-man'].value = window.navigator.userAgent
+    })
+</script>

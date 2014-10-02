@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget 
+    id="io.brian.useragent" 
+    version="0.0.1" 
+    xmlns="http://www.w3.org/ns/widgets" 
+    xmlns:cdv="http://cordova.apache.org/ns/1.0"
+    xmlns:gap = "http://phonegap.com/ns/1.0">
+
+    <name>Useragent</name>
+    <description>
+        Display the useragent and device info.
+    </description>
+    <author email="b@brian.io" href="http://brian.io">Brian LeRoux</author>
+
+    <content src="index.html" />
+    <access origin="*" />
+
+    <gap:platform name="android" />
+    <gap:plugin name="org.apache.cordova.device" version="0.2.12" />
+</widget>
